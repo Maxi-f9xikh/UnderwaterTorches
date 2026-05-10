@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "underwatertorches",
+  "version": "${version}",
+  "name": "UnderwaterTorches",
+  "description": "Place all torches underwater and they will still emit light!",
+  "authors": [
+    "Maxi_f9xikh"
+  ],
+  "contact": {
+    "sources": "https://github.com/Maxi-f9xikh/UnderwaterTorches"
+  },
+  "license": "MIT",
+  "icon": "assets/underwatertorches/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "de.maxi.underwatertorches.client.UnderwatertorchesClient"
+    ],
+    "main": [
+      "de.maxi.underwatertorches.Underwatertorches"
+    ]
+  },
+  "mixins": [
+    "underwatertorches.mixins.json",
+    {
+      "config": "underwatertorches.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "~${minecraft_version}"
+  }
+}
