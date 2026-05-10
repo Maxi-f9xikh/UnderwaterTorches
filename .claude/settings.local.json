@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:meta.fabricmc.net)",
+      "WebFetch(domain:maven.fabricmc.net)",
+      "Bash(JAVA_HOME=\"/c/Users/Maxi/.jdks/temurin-21.0.7\" ./gradlew build)"
+    ]
+  }
+}
