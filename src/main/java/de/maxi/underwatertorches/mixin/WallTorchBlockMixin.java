@@ -27,6 +27,11 @@ public abstract class WallTorchBlockMixin extends Block implements Waterloggable
 		super(settings);
 	}
 
+	@Inject(method = "<init>", at = @At("TAIL"))
+	private void underwatertorches$setDefaultWaterlogged(CallbackInfo ci) {
+		this.setDefaultState(this.getDefaultState().with(Properties.WATERLOGGED, false));
+	}
+
 	@Inject(method = "appendProperties", at = @At("TAIL"))
 	private void underwatertorches$addWaterlogged(StateManager.Builder<Block, BlockState> builder, CallbackInfo ci) {
 		builder.add(Properties.WATERLOGGED);
